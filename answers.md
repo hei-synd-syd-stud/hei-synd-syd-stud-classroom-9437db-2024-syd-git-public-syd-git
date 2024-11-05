@@ -62,8 +62,6 @@ Le fichier _README.md_ a été modifié et il est donc de retour dans la partie 
 
 ![logo](C:\Users\loris\Desktop\Semestre%203\S3fa%20SystemDesign\Github\2024-syd-git-public-LorisCharrex\img\Task5IMG.png)
 
-
-
 La ligne _361a2a3 (**HEAD** -> **Main**) ADD: README file_ 
 
 - 361a2a3 : C'est le hash du commit
@@ -78,12 +76,49 @@ La ligne *5da930b (**origin/main**, **origin/HEAD**) Intial commit*
 
 - **origin/main**, **origin/HEAD** : indique que cette branche a été synchronisée avec un dépôt distant nommé _origin_.
 
-
-
 ### Task 6
+
+![logo](C:\Users\loris\Desktop\Semestre%203\S3fa%20SystemDesign\Github\2024-syd-git-public-LorisCharrex\img\Task6IMG.png)
+
+
+
+ Lorsqu'on effectue un **`git checkout`** sur un commit, Git met à jour l'arbre de travail (les fichiers que je vois dans mon explorateur) pour correspondre à l'état du projet à ce commit. Si un fichier a été ajouté dans un commit plus récent, il ne sera pas présent dans l'arbre de travail d'un commit plus ancien.
+ 
+ **Nature des commits:** Chaque commit crée un instantané de mon projet à un moment donné. En revenant à un commit plus ancien, je revis cet instantané précis. Les fichiers qui n'existaient pas à ce moment-là ne seront donc pas présents.
+
+
+Par exemple en entrant le hash _5da930b_ avec **`git checkout`**, je reviens à l'instantané de ce premier commit et je ne peux accéder uniquement aux fichiers à ce moment là. Ainsi le fichier _README.md_ n'existe pas et les réponnses du fichier *answers.md* sont absentes.
+
+En entrant le hash *5da930b* avec **`git checkout`**, je reviens à l'instantané de ce commit et je peux accéder uniquement aux fichiers à ce moment là. Ainsi le fichier *README.md* apparaît et les réponnses du fichier *answers.md* sont  toujours absentes.
+
+
+
+Avec `git checkout main`: je me place sur la version la plus récente du projet, telle qu'elle est définie par la branche "main".
+
+Le nombre indiqué représente le nombre de modifications qui ont été apportées au projet depuis la création de la branche "main". Chaque modification est enregistrée sous forme de commit.
 
 ## Gitgraph
 
 ### Task 7
 
 ![Gitgraph](img/gitgraph.svg)
+
+1. `develop` correspond au nom de la branche au dernier commit
+
+2. `baa6795` correspond au hash du commit, le hash est propre à un commit.
+
+3. `Merge branch 'feature-auth' into 'developp'` correspond au message qui  explique ce qui a été fait avec ce commit
+
+4. `ByteMe Bob <bob.byteme@hevs.ch> ` correspond à la personne qui a effectué le dernier commit
+
+5. `v1.0.0` correspond à la version de la branch du main
+
+6. Correspond au dernier commit effectué sur la branche `develop`. C'est ce qu'on appelle le `HEAD`.
+
+7. Correspond à un commit qui a pour but d'ajouter une fonction d'identification de l'auteur, il s'agt ici d'un hot-fix qui est une nouvelle branche provenant de la branche `main`.
+
+8. Dernier commit de la branche `main` correspondant à la version `v1.0.0`. Il s'agit d'un merge  qui a fusionné la branche `develop` avec la branche `main`. L'auteur de cette commande est monsieur `Silvan Zahno`.
+
+9.  C'est la branche `develop` complète.
+
+10. C'est la branche `main`.
